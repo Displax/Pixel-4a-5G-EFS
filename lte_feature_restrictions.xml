@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Post Policy for LTE feature
+$Header:  $
+-->
+<policy name        = "LTE FEATURE RESTRICTION"
+        changelist  = "$Change: 19373687 $"
+        policy_ver  = "1103.2.7"
+>
+
+  <initial>
+
+    <mcc_list name="disable_7dlca_mccs" ns="global"> 460 </mcc_list>
+
+    <mcc_list name="disable_laa_mccs" ns="global"> 460 </mcc_list>
+
+    <mcc_list name="disable_6dlca_lic_mccs" ns="global"> 460 </mcc_list>
+
+    <mcc_list name="disable_6dlca_unlic_mccs" ns="global"> 460 </mcc_list>
+
+    <plmn_list name="sprint_plmns">
+      310-120 311-490 311-870 311-940
+    </plmn_list>
+
+    <mcc_list name="post:china_mccs" ns="global"> 460 </mcc_list>
+
+    <plmn_list name="post:cmcc_imsi" ns="global"> 
+      460-00 460-02 460-04 460-07 460-08 
+    </plmn_list>
+
+    <plmn_list name="dss_plmns" ns="global">
+      228-01 505-01 505-11 505-39 505-71 505-72 204-04 262-02 204-16 204-20 232-03 232-04 232-07 208-20 208-21 208-88 262-01 204-08 242-02 260-06 250-01 214-05 214-07 214-01 234-30 234-33 234-34 234-31 234-32 235-01 235-02 234-15 235-91
+    </plmn_list>
+
+  </initial>
+
+  <lte_feature name="LAA">
+    <not> <location_mcc_in subs="this" list="disable_laa_mccs" /> </not>
+  </lte_feature>
+
+  <lte_feature name="6DLCA_UNLIC">
+    <not> <location_mcc_in subs="this" list="disable_6dlca_unlic_mccs" /> </not>
+  </lte_feature>
+
+  <lte_feature subs="this" name="7DLCA_UNLIC">
+    <all_of>
+      <not> <location_mcc_in subs="this" list="disable_7dlca_mccs" /> </not>
+      <not> <serving_plmn_in list="sprint_plmns"  /> </not>
+    </all_of>
+  </lte_feature>
+
+  <lte_feature subs="this" name="6DLCA_LIC">
+    <all_of>
+      <not> <location_mcc_in subs="this" list="disable_6dlca_lic_mccs" /> </not>
+      <not> <serving_plmn_in list="sprint_plmns"  /> </not>	  
+    </all_of>
+  </lte_feature>
+
+  <lte_feature name="NONDDS_APS">
+    <all_of>
+      <imsi_plmn_in list="post:cmcc_imsi" />
+      <imsi_plmn_in subs="other" list="post:cmcc_imsi" />
+      <serving_mcc_in subs="all" list="post:china_mccs" />
+    </all_of>
+  </lte_feature>
+
+  <lte_feature name="NR_DSS">
+    <all_of>
+      <boolean_test name="carrier:dss_is_enabled" />
+      <serving_plmn_in list="dss_plmns" />
+    </all_of>
+  </lte_feature>
+
+</policy>

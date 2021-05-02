@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- #ifdef FEATURE_PIXEL_MODEM_POLICY_ENHANCEMENT -->
+<policy name        = "generic"
+        changelist  = "$Change: 10262256 $"
+        policy_ver  = "0309"
+>
+  <initial>
+    <plmn_list name="plmn_fet">466-01 466-02</plmn_list>
+    <plmn_list name="plmn_twm">466-97</plmn_list>
+    <plmn_list name="plmn_cht">466-92</plmn_list>
+    <plmn_list name="plmn_testra">505-01 505-11 505-71 505-72 530-04</plmn_list>
+    <plmn_list name="plmn_vf(vha)">505-03 505-06</plmn_list>
+    <plmn_list name="plmn_optus">505-02 505-90</plmn_list>
+    <plmn_list name="plmn_bell">302-610 302-651 302-630 302-640</plmn_list>
+    <plmn_list name="plmn_telus">302-220 302-221</plmn_list>
+    <plmn_list name="plmn_fdom">302-490</plmn_list>
+    <plmn_list name="plmn_vtron">302-500 302-510 302-520</plmn_list>
+    <!-- RJIO -->
+    <plmn_list name="plmn_rjio">
+    405-840 405-854 405-855 405-856 405-857 405-858 405-859 405-860 405-861 405-862 405-863
+    405-864 405-865 405-866 405-867 405-868 405-869 405-870 405-871 405-872 405-873 405-874
+    </plmn_list>
+    <mcc_list name="rjio_home_mcc"> 404 405 </mcc_list>
+    <actions>
+      <!-- Define intial UE mode as NORMAL -->
+      <!-- Add dualmode per QCT case 03858668-->
+      <ue_mode> NORMAL </ue_mode>
+      <feature single_sim="normal"> dualmmode </feature>
+
+      <rat_capability_if base="none">
+        <include> G W L </include>
+      </rat_capability_if>
+    </actions>
+
+  </initial>
+
+  <!-- START RULE: Add carriers require to disable 2G -->
+  <if>
+    <any_of>
+      <serving_plmn_in list="plmn_testra" />
+      <serving_plmn_in list="plmn_vf(vha)" />
+      <serving_plmn_in list="plmn_optus" />
+      <serving_plmn_in list="plmn_twm" />
+      <serving_plmn_in list="plmn_fet" />
+      <serving_plmn_in list="plmn_cht" />
+      <serving_plmn_in list="plmn_bell" />
+      <serving_plmn_in list="plmn_telus" />
+      <serving_plmn_in list="plmn_fdom" />
+      <serving_plmn_in list="plmn_vtron" />
+    </any_of>
+    <then>
+      <rat_capability base="none">
+        <include>  W L </include>
+      </rat_capability>
+      <stop />
+    </then>
+  </if>
+
+  <!-- b/158279526, START RULE: Lock LTE only for RJIO -->
+  <if>
+    <all_of>
+      <imsi_plmn_in list="plmn_rjio" />
+      <have_location />
+      <location_mcc_in list="rjio_home_mcc" />
+    </all_of>
+    <then>
+      <rat_capability base="none">
+        <include> L </include>
+      </rat_capability>
+      <stop />
+    </then>
+  </if>
+
+  <!-- Make sure all RAT capabilities are restored before any carrier patches -->
+  <rat_capability base="none">
+    <include> G W L </include>
+  </rat_capability>
+
+</policy>
+<!-- #endif /* FEATURE_PIXEL_MODEM_POLICY_ENHANCEMENT */ -->
