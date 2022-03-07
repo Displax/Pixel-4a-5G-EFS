@@ -5,7 +5,7 @@
         changelist  = "$Change: 10262256 $"
         enabled     = "true"
         schema_ver  = "1"
-        policy_ver  = "0329"
+        policy_ver  = "0903"
 >
   <initial>
       <plmn_list name="plmn_vzw">310-004 310-005 310-006 310-012 310-590 310-890 311-480 311-270 312-770</plmn_list>
@@ -13,6 +13,7 @@
       <plmn_list name="plmn_att">310-170 310-380 310-90 310-280 310-70 310-410 310-980 310-560 310-30 311-180 310-680 310-950 310-190</plmn_list>
       <plmn_list name="plmn_cricket">310-150</plmn_list>
       <plmn_list name="plmn_firstnet">312-670 313-100 313-110 313-120 313-130 313-140</plmn_list>
+      <plmn_list name="plmn_lla">313-790</plmn_list>
       <plmn_list name="plmn_tmo">310-160 310-200 310-210 310-220 310-230 310-240 310-250 310-260 310-270 310-310 310-490 310-660 310-800</plmn_list>
       <plmn_list name="plmn_usc">310-730 311-220 311-580</plmn_list>
       <plmn_list name="plmn_sprint">310-120 311-490 311-870 312-250 312-530 316-010</plmn_list>
@@ -40,20 +41,11 @@
       <plmn_list name="plmn_vodafone es">214-01</plmn_list>
       <plmn_list name="plmn_tim">222-01</plmn_list>
       <plmn_list name="plmn_vodafone it">222-10</plmn_list>
-      <plmn_list name="plmn_iliad it">222-50</plmn_list>
       <plmn_list name="plmn_wind-it">222-88 222-99</plmn_list>
       <plmn_list name="plmn_vodafone ie">272-01</plmn_list>
       <plmn_list name="plmn_h3g-ie">272-02 272-05</plmn_list>
-      <plmn_list name="plmn_vodafone nl">204-04</plmn_list>
-      <plmn_list name="plmn_telekom nl">204-16 204-20</plmn_list>
       <plmn_list name="plmn_vodafone tr">286-02</plmn_list>
       <plmn_list name="plmn_swisscom">228-01</plmn_list>
-      <plmn_list name="plmn_tele2 se">240-07</plmn_list>
-      <plmn_list name="plmn_telia se">240-01</plmn_list>
-      <plmn_list name="plmn_telenor se">240-08</plmn_list>
-      <plmn_list name="plmn_telia no">242-02</plmn_list>
-      <plmn_list name="plmn_telenor no">242-01</plmn_list>
-      <plmn_list name="plmn_telenor dk">238-02</plmn_list>
       <plmn_list name="plmn_testra">505-01 505-11 505-71 505-72 530-04</plmn_list>
       <plmn_list name="plmn_vf(vha)">505-03 505-06</plmn_list>
       <plmn_list name="plmn_optus">505-02 505-90</plmn_list>
@@ -66,7 +58,8 @@
       <plmn_list name="plmn_kddi">440-07 440-08 440-50 440-51 440-52 440-53 440-54 440-55 440-56 440-70 440-71 440-72 440-73 440-74 440-75 440-76 440-77 440-78 440-79 440-88 440-89 441-70</plmn_list>
       <plmn_list name="plmn_dcm">440-10</plmn_list>
       <plmn_list name="plmn_sbm">440-20</plmn_list>
-      <mcc_list name="EU_MCCs">204 208 214 222 228 230 232 238 240 242 260 262 272 286</mcc_list>
+      <plmn_list name="plmn_eu_common">232-05 232-06 232-10 232-14 232-01 232-02 232-09 232-11 232-12 232-03 232-04 232-07 204-08 204-10 204-12 204-98 204-16 204-20 204-04 238-06 238-02 238-66 238-77 238-20 238-30 240-02 240-07 240-06 240-01 242-01 242-12 242-02 242-05 222-50</plmn_list>
+      <mcc_list name="EU_MCCs">234 208 262 232 260 230 272 204 228 214 222 240 242 238 286</mcc_list>
   </initial>
 
   <select>
@@ -91,6 +84,7 @@
         <serving_plmn_in list="plmn_att" />
         <serving_plmn_in list="plmn_cricket" />
         <serving_plmn_in list="plmn_firstnet" />
+        <serving_plmn_in list="plmn_lla" />
       </any_of>
       <actions>
         <ca_band_combos string="12AA-2A-mAll;12A-2AA-mAll;14AA-2A-mAll;14A-2AA-mAll;29A-2AA-mAll;2AA-2A-mAll;30AA-2A-mAll;30A-2AA-mAll;46A-2AA-mAll;5AA-2A-mAll;5A-2AA-mAll;66AA-2A-mAll;66A-2AA-mAll;30AA-12A-2A-mAll;30A-12AA-2A-mAll;30A-12A-2AA-mAll;66AA-12A-2A-mAll;66A-12AA-2A-mAll;66A-12A-2AA-mAll;30AA-14A-2A-mAll;30A-14AA-2A-mAll;30A-14A-2AA-mAll;66AA-14A-2A-mAll;66A-14AA-2A-mAll;66A-14A-2AA-mAll;30AA-29A-2A-mAll;30A-29A-2AA-mAll;66AA-29A-2A-mAll;66A-29A-2AA-mAll;12AA-2A-2A-mAll;12A-2AA-2A-mAll;14AA-2A-2A-mAll;14A-2AA-2A-mAll;29A-2AA-2A-mAll;30AA-2A-2A-mAll;30A-2AA-2A-mAll;5AA-2A-2A-mAll;5A-2AA-2A-mAll;66AA-2A-2A-mAll;66A-2AA-2A-mAll;66AA-30A-2A-mAll;66A-30AA-2A-mAll;66A-30A-2AA-mAll;46A-46A-2AA-mAll;46C-2AA-mAll;30AA-5A-2A-mAll;30A-5AA-2A-mAll;30A-5A-2AA-mAll;66AA-5A-2A-mAll;66A-5AA-2A-mAll;66A-5A-2AA-mAll;5BA-2A-mAll;5B-2AA-mAll;66AA-66A-2A-mAll;66A-66A-2AA-mAll;66AA-30A-12A-2A-mAll;66A-30AA-12A-2A-mAll;66A-30A-12AA-2A-mAll;66A-30A-12A-2AA-mAll;66AA-66A-12A-2A-mAll;66A-66A-12AA-2A-mAll;66A-66A-12A-2AA-mAll;66AA-30A-14A-2A-mAll;66A-30AA-14A-2A-mAll;66A-30A-14AA-2A-mAll;66A-30A-14A-2AA-mAll;66AA-66A-14A-2A-mAll;66A-66A-14AA-2A-mAll;66A-66A-14A-2AA-mAll;66AA-30A-29A-2A-mAll;66A-30AA-29A-2A-mAll;66A-30A-29A-2AA-mAll;66AA-66A-29A-2A-mAll;66A-66A-29A-2AA-mAll;30AA-12A-2A-2A-mAll;30A-12AA-2A-2A-mAll;30A-12A-2AA-2A-mAll;66AA-12A-2A-2A-mAll;66A-12AA-2A-2A-mAll;66A-12A-2AA-2A-mAll;66AA-14A-2A-2A-mAll;66A-14AA-2A-2A-mAll;66A-14A-2AA-2A-mAll;66AA-29A-2A-2A-mAll;66A-29A-2AA-2A-mAll;66AA-30A-2A-2A-mAll;66A-30AA-2A-2A-mAll;66A-30A-2AA-2A-mAll;66AA-5A-2A-2A-mAll;66A-5AA-2A-2A-mAll;66A-5A-2AA-2A-mAll;66AA-66A-2A-2A-mAll;66A-66A-2AA-2A-mAll;66AA-66A-30A-2A-mAll;66A-66A-30AA-2A-mAll;66A-66A-30A-2AA-mAll;46D-2AA-mAll;46C-46A-2AA-mAll;66AA-30A-5A-2A-mAll;66A-30AA-5A-2A-mAll;66A-30A-5AA-2A-mAll;66A-30A-5A-2AA-mAll;66AA-66A-5A-2A-mAll;66A-66A-5AA-2A-mAll;66A-66A-5A-2AA-mAll;30AA-5B-2A-mAll;30A-5BA-2A-mAll;30A-5B-2AA-mAll;66AA-5B-2A-mAll;66A-5BA-2A-mAll;66A-5B-2AA-mAll;30AA-5A-mAll;30A-5AA-mAll;66AA-5A-mAll;66A-5AA-mAll;5BA-mAll;5BB-mAll;66AA-30A-5A-mAll;66A-30AA-5A-mAll;66A-30A-5AA-mAll;66AA-66A-5A-mAll;66A-66A-5AA-mAll;30AA-5B-mAll;30A-5BA-mAll;66AA-5B-mAll;66A-5BA-mAll;66AA-30A-5B-mAll;66A-30AA-5B-mAll;66A-30A-5BA-mAll;66AA-66A-5B-mAll;66A-66A-5BA-mAll;30AA-12A-mAll;30A-12AA-mAll;66AA-12A-mAll;66A-12AA-mAll;66AA-30A-12A-mAll;66A-30AA-12A-mAll;66A-30A-12AA-mAll;66AA-66A-12A-mAll;66A-66A-12AA-mAll;66AA-66A-30A-12A-mAll;66A-66A-30AA-12A-mAll;66A-66A-30A-12AA-mAll;30AA-14A-mAll;30A-14AA-mAll;66AA-14A-mAll;66A-14AA-mAll;66AA-30A-14A-mAll;66A-30AA-14A-mAll;66A-30A-14AA-mAll;66AA-66A-14A-mAll;66A-66A-14AA-mAll;66AA-66A-30A-14A-mAll;66A-66A-30AA-14A-mAll;66A-66A-30A-14AA-mAll;30AA-29A-mAll;66AA-29A-mAll;66AA-30A-29A-mAll;66A-30AA-29A-mAll;66AA-66A-29A-mAll;66AA-30A-mAll;66A-30AA-mAll;66AA-66A-30A-mAll;66A-66A-30AA-mAll;66AA-46A-mAll;66AA-46A-46A-mAll;66AA-46C-mAll;66AA-46C-46A-mAll;66AA-46D-mAll;66AA-66A-mAll;"/>
@@ -109,7 +103,7 @@
     <case>
       <serving_plmn_in list="plmn_usc"/>
       <actions>
-        <ca_band_combos string="12AA-2A-mAll;12A-2AA-mAll;2AA-2A-mAll;46A-2AA-mAll;4AA-2A-mAll;4A-2AA-mAll;5AA-2A-mAll;5A-2AA-mAll;66AA-2A-mAll;66A-2AA-mAll;71AA-2A-mAll;71A-2AA-mAll;66AA-12A-2A-mAll;66A-12AA-2A-mAll;66A-12A-2AA-mAll;12BA-2A-mAll;12B-2AA-mAll;12AA-2A-2A-mAll;12A-2AA-2A-mAll;46A-2AA-2A-mAll;4AA-2A-2A-mAll;4A-2AA-2A-mAll;5AA-2A-2A-mAll;5A-2AA-2A-mAll;66AA-2A-2A-mAll;66A-2AA-2A-mAll;46A-46A-2AA-mAll;66AA-46A-2A-mAll;66A-46A-2AA-mAll;46C-2AA-mAll;12AA-4A-2A-mAll;12A-4AA-2A-mAll;12A-4A-2AA-mAll;4AA-4A-2A-mAll;4A-4A-2AA-mAll;5AA-4A-2A-mAll;5A-4AA-2A-mAll;5A-4A-2AA-mAll;71AA-4A-2A-mAll;71A-4AA-2A-mAll;71A-4A-2AA-mAll;46A-5AA-2A-mAll;46A-5A-2AA-mAll;66AA-5A-2A-mAll;66A-5AA-2A-mAll;66A-5A-2AA-mAll;66AA-66A-2A-mAll;66A-66A-2AA-mAll;71AA-66A-2A-mAll;71A-66AA-2A-mAll;71A-66A-2AA-mAll;66AA-66A-12A-2A-mAll;66A-66A-12AA-2A-mAll;66A-66A-12A-2AA-mAll;66AA-12B-2A-mAll;66A-12BA-2A-mAll;66A-12B-2AA-mAll;66AA-12A-2A-2A-mAll;66A-12AA-2A-2A-mAll;66A-12A-2AA-2A-mAll;12BA-2A-2A-mAll;12B-2AA-2A-mAll;46C-2AA-2A-mAll;12AA-4A-2A-2A-mAll;12A-4AA-2A-2A-mAll;12A-4A-2AA-2A-mAll;4AA-4A-2A-2A-mAll;4A-4A-2AA-2A-mAll;5AA-4A-2A-2A-mAll;5A-4AA-2A-2A-mAll;5A-4A-2AA-2A-mAll;66AA-5A-2A-2A-mAll;66A-5AA-2A-2A-mAll;66A-5A-2AA-2A-mAll;66AA-66A-2A-2A-mAll;66A-66A-2AA-2A-mAll;66AA-46A-46A-2A-mAll;66A-46A-46A-2AA-mAll;46C-46A-2AA-mAll;66AA-46C-2A-mAll;66A-46C-2AA-mAll;46D-2AA-mAll;12BA-4A-2A-mAll;12B-4AA-2A-mAll;12B-4A-2AA-mAll;12AA-4A-4A-2A-mAll;12A-4AA-4A-2A-mAll;12A-4A-4A-2AA-mAll;5AA-4A-4A-2A-mAll;5A-4AA-4A-2A-mAll;5A-4A-4A-2AA-mAll;46C-5AA-2A-mAll;46C-5A-2AA-mAll;66AA-66A-5A-2A-mAll;66A-66A-5AA-2A-mAll;66A-66A-5A-2AA-mAll;12AA-4A-mAll;12A-4AA-mAll;46A-4AA-mAll;4AA-4A-mAll;5AA-4A-mAll;5A-4AA-mAll;71AA-4A-mAll;71A-4AA-mAll;12BA-4A-mAll;12B-4AA-mAll;46A-46A-4AA-mAll;46C-4AA-mAll;12AA-4A-4A-mAll;12A-4AA-4A-mAll;5AA-4A-4A-mAll;5A-4AA-4A-mAll;46C-46A-4AA-mAll;46D-4AA-mAll;12BA-4A-4A-mAll;12B-4AA-4A-mAll;46A-5AA-mAll;66AA-5A-mAll;66A-5AA-mAll;66AA-46A-5A-mAll;66A-46A-5AA-mAll;46C-5AA-mAll;66AA-66A-5A-mAll;66A-66A-5AA-mAll;66AA-46C-5A-mAll;66A-46C-5AA-mAll;46D-5AA-mAll;46A-12AA-mAll;66AA-12A-mAll;66A-12AA-mAll;12BA-mAll;66AA-12B-mAll;66A-12BA-mAll;46C-12AA-mAll;66AA-66A-12A-mAll;66A-66A-12AA-mAll;46D-12AA-mAll;66AA-46A-mAll;66AA-46A-46A-mAll;66AA-66A-46A-mAll;66AA-46C-mAll;66CA-46A-mAll;66AA-46C-46A-mAll;66AA-66A-46C-mAll;66AA-46D-mAll;66AA-66A-mAll;71AA-66A-mAll;71A-66AA-mAll;66AA-66A-66A-mAll;"/>
+        <ca_band_combos string="12AA-2A-mAll;12A-2AA-mAll;2AA-2A-mAll;46A-2AA-mAll;48AA-2A-mAll;48A-2AA-mAll;4AA-2A-mAll;4A-2AA-mAll;5AA-2A-mAll;5A-2AA-mAll;66AA-2A-mAll;66A-2AA-mAll;71AA-2A-mAll;71A-2AA-mAll;66AA-12A-2A-mAll;66A-12AA-2A-mAll;66A-12A-2AA-mAll;12BA-2A-mAll;12B-2AA-mAll;12AA-2A-2A-mAll;12A-2AA-2A-mAll;46A-2AA-2A-mAll;4AA-2A-2A-mAll;4A-2AA-2A-mAll;5AA-2A-2A-mAll;5A-2AA-2A-mAll;66AA-2A-2A-mAll;66A-2AA-2A-mAll;46A-46A-2AA-mAll;66AA-46A-2A-mAll;66A-46A-2AA-mAll;46C-2AA-mAll;48CA-2A-mAll;48C-2AA-mAll;12AA-4A-2A-mAll;12A-4AA-2A-mAll;12A-4A-2AA-mAll;4AA-4A-2A-mAll;4A-4A-2AA-mAll;5AA-4A-2A-mAll;5A-4AA-2A-mAll;5A-4A-2AA-mAll;71AA-4A-2A-mAll;71A-4AA-2A-mAll;71A-4A-2AA-mAll;46A-5AA-2A-mAll;46A-5A-2AA-mAll;48AA-5A-2A-mAll;48A-5AA-2A-mAll;48A-5A-2AA-mAll;66AA-5A-2A-mAll;66A-5AA-2A-mAll;66A-5A-2AA-mAll;66AA-66A-2A-mAll;66A-66A-2AA-mAll;71AA-66A-2A-mAll;71A-66AA-2A-mAll;71A-66A-2AA-mAll;66AA-66A-12A-2A-mAll;66A-66A-12AA-2A-mAll;66A-66A-12A-2AA-mAll;66AA-12B-2A-mAll;66A-12BA-2A-mAll;66A-12B-2AA-mAll;66AA-12A-2A-2A-mAll;66A-12AA-2A-2A-mAll;66A-12A-2AA-2A-mAll;12BA-2A-2A-mAll;12B-2AA-2A-mAll;46C-2AA-2A-mAll;12AA-4A-2A-2A-mAll;12A-4AA-2A-2A-mAll;12A-4A-2AA-2A-mAll;4AA-4A-2A-2A-mAll;4A-4A-2AA-2A-mAll;5AA-4A-2A-2A-mAll;5A-4AA-2A-2A-mAll;5A-4A-2AA-2A-mAll;66AA-5A-2A-2A-mAll;66A-5AA-2A-2A-mAll;66A-5A-2AA-2A-mAll;66AA-66A-2A-2A-mAll;66A-66A-2AA-2A-mAll;66AA-46A-46A-2A-mAll;66A-46A-46A-2AA-mAll;46C-46A-2AA-mAll;66AA-46C-2A-mAll;66A-46C-2AA-mAll;46D-2AA-mAll;12BA-4A-2A-mAll;12B-4AA-2A-mAll;12B-4A-2AA-mAll;12AA-4A-4A-2A-mAll;12A-4AA-4A-2A-mAll;12A-4A-4A-2AA-mAll;5AA-4A-4A-2A-mAll;5A-4AA-4A-2A-mAll;5A-4A-4A-2AA-mAll;46C-5AA-2A-mAll;46C-5A-2AA-mAll;48CA-5A-2A-mAll;48C-5AA-2A-mAll;48C-5A-2AA-mAll;66AA-66A-5A-2A-mAll;66A-66A-5AA-2A-mAll;66A-66A-5A-2AA-mAll;12AA-4A-mAll;12A-4AA-mAll;46A-4AA-mAll;4AA-4A-mAll;5AA-4A-mAll;5A-4AA-mAll;71AA-4A-mAll;71A-4AA-mAll;12BA-4A-mAll;12B-4AA-mAll;46A-46A-4AA-mAll;46C-4AA-mAll;12AA-4A-4A-mAll;12A-4AA-4A-mAll;5AA-4A-4A-mAll;5A-4AA-4A-mAll;46C-46A-4AA-mAll;46D-4AA-mAll;12BA-4A-4A-mAll;12B-4AA-4A-mAll;46A-5AA-mAll;48AA-5A-mAll;48A-5AA-mAll;66AA-5A-mAll;66A-5AA-mAll;66AA-46A-5A-mAll;66A-46A-5AA-mAll;46C-5AA-mAll;48CA-5A-mAll;48C-5AA-mAll;66AA-66A-5A-mAll;66A-66A-5AA-mAll;66AA-46C-5A-mAll;66A-46C-5AA-mAll;46D-5AA-mAll;46A-12AA-mAll;66AA-12A-mAll;66A-12AA-mAll;12BA-mAll;66AA-12B-mAll;66A-12BA-mAll;46C-12AA-mAll;66AA-66A-12A-mAll;66A-66A-12AA-mAll;46D-12AA-mAll;66AA-46A-mAll;66AA-46A-46A-mAll;66AA-66A-46A-mAll;66AA-46C-mAll;66CA-46A-mAll;66AA-46C-46A-mAll;66AA-66A-46C-mAll;66AA-46D-mAll;48CA-mAll;66AA-66A-mAll;71AA-66A-mAll;71A-66AA-mAll;66AA-66A-66A-mAll;"/>
         <stop/>
       </actions>
     </case>
@@ -149,7 +143,7 @@
     <case>
       <serving_plmn_in list="plmn_bell"/>
       <actions>
-        <ca_band_combos string="12AA-2A-mAll;12A-2AA-mAll;13AA-2A-mAll;13A-2AA-mAll;17AA-2A-mAll;17A-2AA-mAll;29A-2AA-mAll;2AA-2A-mAll;4AA-2A-mAll;4A-2AA-mAll;5AA-2A-mAll;5A-2AA-mAll;66AA-2A-mAll;66A-2AA-mAll;7AA-2A-mAll;7A-2AA-mAll;7AA-2A-2A-mAll;7A-2AA-2A-mAll;66AA-2A-2A-mAll;66A-2AA-2A-mAll;12AA-4A-2A-mAll;12A-4AA-2A-mAll;12A-4A-2AA-mAll;29A-4AA-2A-mAll;29A-4A-2AA-mAll;5AA-4A-2A-mAll;5A-4AA-2A-mAll;5A-4A-2AA-mAll;7AA-4A-2A-mAll;7A-4AA-2A-mAll;7A-4A-2AA-mAll;66AA-66A-2A-mAll;66A-66A-2AA-mAll;12AA-7A-2A-mAll;12A-7AA-2A-mAll;12A-7A-2AA-mAll;7AA-7A-2A-mAll;7A-7A-2AA-mAll;7CA-2A-mAll;7C-2AA-mAll;12AA-7A-4A-2A-mAll;12A-7AA-4A-2A-mAll;12A-7A-4AA-2A-mAll;12A-7A-4A-2AA-mAll;7AA-7A-4A-2A-mAll;7A-7A-4AA-2A-mAll;7A-7A-4A-2AA-mAll;7CA-4A-2A-mAll;7C-4AA-2A-mAll;7C-4A-2AA-mAll;12AA-4A-mAll;12A-4AA-mAll;13AA-4A-mAll;13A-4AA-mAll;29A-4AA-mAll;4AA-4A-mAll;5AA-4A-mAll;5A-4AA-mAll;7AA-4A-mAll;7A-4AA-mAll;12AA-4A-4A-mAll;12A-4AA-4A-mAll;12AA-7A-4A-mAll;12A-7AA-4A-mAll;12A-7A-4AA-mAll;7AA-7A-4A-mAll;7A-7A-4AA-mAll;7CA-4A-mAll;7C-4AA-mAll;66AA-5A-mAll;66A-5AA-mAll;7AA-5A-mAll;7A-5AA-mAll;7AA-7A-5A-mAll;7A-7A-5AA-mAll;12AA-7A-mAll;12A-7AA-mAll;66AA-7A-mAll;66A-7AA-mAll;7AA-7A-mAll;7CA-mAll;66AA-66A-7A-mAll;66A-66A-7AA-mAll;66AA-66A-mAll;13AA-7A-2A-mAll;13A-7AA-2A-mAll;13A-7A-2AA-mAll;13AA-7A-7A-2A-mAll;13A-7AA-7A-2A-mAll;13A-7A-7A-2AA-mAll;13AA-7C-2A-mAll;13A-7CA-2A-mAll;13A-7C-2AA-mAll;13AA-7A-mAll;13A-7AA-mAll;13AA-7A-7A-mAll;13A-7AA-7A-mAll;13AA-7C-mAll;13A-7CA-mAll;"/>
+        <ca_band_combos string="12AA-2A-mAll;12A-2AA-mAll;13AA-2A-mAll;13A-2AA-mAll;17AA-2A-mAll;17A-2AA-mAll;29A-2AA-mAll;2AA-2A-mAll;4AA-2A-mAll;4A-2AA-mAll;5AA-2A-mAll;5A-2AA-mAll;66AA-2A-mAll;66A-2AA-mAll;7AA-2A-mAll;7A-2AA-mAll;7AA-2A-2A-mAll;7A-2AA-2A-mAll;66AA-2A-2A-mAll;66A-2AA-2A-mAll;12AA-4A-2A-mAll;12A-4AA-2A-mAll;12A-4A-2AA-mAll;29A-4AA-2A-mAll;29A-4A-2AA-mAll;5AA-4A-2A-mAll;5A-4AA-2A-mAll;5A-4A-2AA-mAll;7AA-4A-2A-mAll;7A-4AA-2A-mAll;7A-4A-2AA-mAll;66AA-66A-2A-mAll;66A-66A-2AA-mAll;12AA-7A-2A-mAll;12A-7AA-2A-mAll;12A-7A-2AA-mAll;7AA-7A-2A-mAll;7A-7A-2AA-mAll;7CA-2A-mAll;7C-2AA-mAll;66AA-66A-2A-2A-mAll;66A-66A-2AA-2A-mAll;12AA-7A-4A-2A-mAll;12A-7AA-4A-2A-mAll;12A-7A-4AA-2A-mAll;12A-7A-4A-2AA-mAll;7AA-7A-4A-2A-mAll;7A-7A-4AA-2A-mAll;7A-7A-4A-2AA-mAll;7CA-4A-2A-mAll;7C-4AA-2A-mAll;7C-4A-2AA-mAll;12AA-4A-mAll;12A-4AA-mAll;13AA-4A-mAll;13A-4AA-mAll;29A-4AA-mAll;4AA-4A-mAll;5AA-4A-mAll;5A-4AA-mAll;7AA-4A-mAll;7A-4AA-mAll;12AA-4A-4A-mAll;12A-4AA-4A-mAll;12AA-7A-4A-mAll;12A-7AA-4A-mAll;12A-7A-4AA-mAll;7AA-7A-4A-mAll;7A-7A-4AA-mAll;7CA-4A-mAll;7C-4AA-mAll;66AA-5A-mAll;66A-5AA-mAll;7AA-5A-mAll;7A-5AA-mAll;7AA-7A-5A-mAll;7A-7A-5AA-mAll;12AA-7A-mAll;12A-7AA-mAll;66AA-7A-mAll;66A-7AA-mAll;7AA-7A-mAll;7CA-mAll;66AA-66A-7A-mAll;66A-66A-7AA-mAll;66AA-66A-mAll;13AA-7A-2A-mAll;13A-7AA-2A-mAll;13A-7A-2AA-mAll;13AA-7A-7A-2A-mAll;13A-7AA-7A-2A-mAll;13A-7A-7A-2AA-mAll;13AA-7C-2A-mAll;13A-7CA-2A-mAll;13A-7C-2AA-mAll;13AA-7A-mAll;13A-7AA-mAll;13AA-7A-7A-mAll;13A-7AA-7A-mAll;13AA-7C-mAll;13A-7CA-mAll;"/>
         <stop/>
       </actions>
     </case>
@@ -157,7 +151,7 @@
     <case>
       <serving_plmn_in list="plmn_fdom"/>
       <actions>
-        <ca_band_combos string="46A-4AA-mAll;7AA-4A-mAll;7A-4AA-mAll;46A-46A-4AA-mAll;46C-4AA-mAll;46A-7AA-mAll;66AA-7A-mAll;66A-7AA-mAll;46C-7AA-mAll;66AA-66A-7A-mAll;66A-66A-7AA-mAll;46A-13AA-mAll;66AA-13A-mAll;66A-13AA-mAll;66AA-46A-13A-mAll;66A-46A-13AA-mAll;66AA-66A-13A-mAll;66A-66A-13AA-mAll;66AA-46A-mAll;66AA-46A-46A-mAll;66AA-66A-46A-mAll;66AA-46C-mAll;66AA-66A-mAll;66AA-46A-7A-mAll;66A-46A-7AA-mAll;"/>
+        <ca_band_combos string="46A-4AA-mAll;7AA-4A-mAll;7A-4AA-mAll;46A-46A-4AA-mAll;46C-4AA-mAll;46A-7AA-mAll;66AA-7A-mAll;66A-7AA-mAll;46C-7AA-mAll;66AA-66A-7A-mAll;66A-66A-7AA-mAll;46A-13AA-mAll;66AA-13A-mAll;66A-13AA-mAll;66AA-46A-13A-mAll;66A-46A-13AA-mAll;66AA-66A-13A-mAll;66A-66A-13AA-mAll;66AA-46A-mAll;66AA-46A-46A-mAll;66AA-66A-46A-mAll;66AA-46C-mAll;66AA-66A-mAll;66AA-46A-7A-mAll;66A-46A-7AA-mAll;71AA-66A-mAll;71A-66AA-mAll;"/>
         <stop/>
       </actions>
     </case>
@@ -315,14 +309,6 @@
     </case>
 
     <case>
-      <serving_plmn_in list="plmn_iliad it"/>
-      <actions>
-        <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
       <serving_plmn_in list="plmn_vodafone it"/>
       <actions>
         <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;32A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;32A-20AA-1A-mAll;32A-20A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;32A-3AA-1A-mAll;32A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;32A-7AA-1A-mAll;32A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;32A-7AA-3A-1A-mAll;32A-7A-3AA-1A-mAll;32A-7A-3A-1AA-mAll;8AA-7A-3A-1A-mAll;8A-7AA-3A-1A-mAll;8A-7A-3AA-1A-mAll;8A-7A-3A-1AA-mAll;32A-20AA-7A-1A-mAll;32A-20A-7AA-1A-mAll;32A-20A-7A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;32A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;32A-20AA-3A-mAll;32A-20A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;32A-7AA-3A-mAll;32A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;32A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;32A-20AA-7A-mAll;32A-20A-7AA-mAll;32A-20AA-mAll;"/>
@@ -347,22 +333,6 @@
     </case>
 
     <case>
-      <serving_plmn_in list="plmn_telekom nl"/>
-      <actions>
-        <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;38AA-1A-mAll;38A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;38AA-3A-1A-mAll;38A-3AA-1A-mAll;38A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;3CA-1A-mAll;3C-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;38AA-8A-1A-mAll;38A-8AA-1A-mAll;38A-8A-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;8AA-7A-3A-1A-mAll;8A-7AA-3A-1A-mAll;8A-7A-3AA-1A-mAll;8A-7A-3A-1AA-mAll;38AA-8A-3A-1A-mAll;38A-8AA-3A-1A-mAll;38A-8A-3AA-1A-mAll;38A-8A-3A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;38AA-3A-mAll;38A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;38AA-8A-3A-mAll;38A-8AA-3A-mAll;38A-8A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;38AA-8A-mAll;38A-8AA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_vodafone nl"/>
-      <actions>
-        <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;28AA-1A-mAll;28A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;8AA-7A-3A-1A-mAll;8A-7AA-3A-1A-mAll;8A-7A-3AA-1A-mAll;8A-7A-3A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;7CA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
       <serving_plmn_in list="plmn_vodafone tr"/>
       <actions>
         <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;38AA-3A-mAll;38A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;38AA-7A-3A-mAll;38A-7AA-3A-mAll;38A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;"/>
@@ -374,54 +344,6 @@
       <serving_plmn_in list="plmn_swisscom"/>
       <actions>
         <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;3CA-1A-mAll;3C-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;3CA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;20AA-3C-mAll;20A-3CA-mAll;7AA-3C-mAll;7A-3CA-mAll;20AA-7A-mAll;20A-7AA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_tele2 se"/>
-      <actions>
-        <ca_band_combos string="20AA-3A-mAll;20A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;7CA-3A-mAll;7C-3AA-mAll;20AA-7C-3A-mAll;20A-7CA-3A-mAll;20A-7C-3AA-mAll;28AA-7C-3A-mAll;28A-7CA-3A-mAll;28A-7C-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;20AA-7C-mAll;20A-7CA-mAll;28AA-7C-mAll;28A-7CA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_telia se"/>
-      <actions>
-        <ca_band_combos string="20AA-3A-mAll;20A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;3CA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;20AA-3C-mAll;20A-3CA-mAll;28AA-3C-mAll;28A-3CA-mAll;7AA-3C-mAll;7A-3CA-mAll;20AA-7A-3C-mAll;20A-7AA-3C-mAll;20A-7A-3CA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_telenor se"/>
-      <actions>
-        <ca_band_combos string="20AA-3A-mAll;20A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;7AA-7A-3A-mAll;7A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;8AA-7A-7A-3A-mAll;8A-7AA-7A-3A-mAll;8A-7A-7A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;7AA-7A-mAll;8AA-7A-mAll;8A-7AA-mAll;8AA-7A-7A-mAll;8A-7AA-7A-mAll;28AA-7A-7A-mAll;28A-7AA-7A-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_telia no"/>
-      <actions>
-        <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;28AA-1A-mAll;28A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;28AA-3A-1A-mAll;28A-3AA-1A-mAll;28A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;28AA-7A-1A-mAll;28A-7AA-1A-mAll;28A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;8AA-7A-3A-1A-mAll;8A-7AA-3A-1A-mAll;8A-7A-3AA-1A-mAll;8A-7A-3A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_telenor no"/>
-      <actions>
-        <ca_band_combos string="3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;3CA-1A-mAll;3C-1AA-mAll;7CA-1A-mAll;7C-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;3CA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;7CA-3A-mAll;7C-3AA-mAll;20AA-3C-mAll;20A-3CA-mAll;7AA-3C-mAll;7A-3CA-mAll;8AA-3C-mAll;8A-3CA-mAll;8AA-7A-3C-mAll;8A-7AA-3C-mAll;8A-7A-3CA-mAll;20AA-7A-mAll;20A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;7CA-mAll;20AA-7C-mAll;20A-7CA-mAll;"/>
-        <stop/>
-      </actions>
-    </case>
-
-    <case>
-      <serving_plmn_in list="plmn_telenor dk"/>
-      <actions>
-        <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;7CA-1A-mAll;7C-1AA-mAll;20AA-7A-3A-1A-mAll;20A-7AA-3A-1A-mAll;20A-7A-3AA-1A-mAll;20A-7A-3A-1AA-mAll;8AA-7A-3A-1A-mAll;8A-7AA-3A-1A-mAll;8A-7A-3AA-1A-mAll;8A-7A-3A-1AA-mAll;7CA-3A-1A-mAll;7C-3AA-1A-mAll;7C-3A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;7CA-3A-mAll;7C-3AA-mAll;20AA-7C-3A-mAll;20A-7CA-3A-mAll;20A-7C-3AA-mAll;20AA-7A-mAll;20A-7AA-mAll;8AA-7A-mAll;8A-7AA-mAll;7CA-mAll;20AA-7C-mAll;20A-7CA-mAll;20AA-7C-1A-mAll;20A-7CA-1A-mAll;20A-7C-1AA-mAll;"/>
         <stop/>
       </actions>
     </case>
@@ -523,9 +445,17 @@
     </case>
 
     <case>
+      <serving_plmn_in list="plmn_eu_common"/>
+      <actions>
+        <ca_band_combos string="1AA-1A-mAll;20AA-1A-mAll;20A-1AA-mAll;28AA-1A-mAll;28A-1AA-mAll;32A-1AA-mAll;38AA-1A-mAll;38A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;40AA-1A-mAll;40A-1AA-mAll;42AA-1A-mAll;42A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;1CA-mAll;20AA-3A-mAll;20A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;32A-3AA-mAll;38AA-3A-mAll;38A-3AA-mAll;3AA-3A-mAll;40AA-3A-mAll;40A-3AA-mAll;42AA-3A-mAll;42A-3AA-mAll;46A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;3CA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;32A-7AA-mAll;38AA-7A-mAll;38A-7AA-mAll;40AA-7A-mAll;40A-7AA-mAll;46A-7AA-mAll;7AA-7A-mAll;8AA-7A-mAll;8A-7AA-mAll;7CA-mAll;32A-8AA-mAll;38AA-8A-mAll;38A-8AA-mAll;40AA-8A-mAll;40A-8AA-mAll;32A-20AA-mAll;38AA-20A-mAll;38A-20AA-mAll;40AA-20A-mAll;40A-20AA-mAll;42AA-20A-mAll;42A-20AA-mAll;40AA-28A-mAll;40A-28AA-mAll;38CA-mAll;40AA-40A-mAll;40CA-mAll;42AA-42A-mAll;42CA-mAll;3AA-1A-1A-mAll;3A-1AA-1A-mAll;7AA-1A-1A-mAll;7A-1AA-1A-mAll;28AA-1A-1A-mAll;28A-1AA-1A-mAll;32A-20AA-1A-mAll;32A-20A-1AA-mAll;42AA-20A-1A-mAll;42A-20AA-1A-mAll;42A-20A-1AA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;28AA-3A-1A-mAll;28A-3AA-1A-mAll;28A-3A-1AA-mAll;32A-3AA-1A-mAll;32A-3A-1AA-mAll;38AA-3A-1A-mAll;38A-3AA-1A-mAll;38A-3A-1AA-mAll;40AA-3A-1A-mAll;40A-3AA-1A-mAll;40A-3A-1AA-mAll;42AA-3A-1A-mAll;42A-3AA-1A-mAll;42A-3A-1AA-mAll;3AA-3A-1A-mAll;3A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;8AA-3A-1A-mAll;8A-3AA-1A-mAll;8A-3A-1AA-mAll;3CA-1A-mAll;3C-1AA-mAll;40CA-1A-mAll;40C-1AA-mAll;42AA-42A-1A-mAll;42A-42A-1AA-mAll;42CA-1A-mAll;42C-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;28AA-7A-1A-mAll;28A-7AA-1A-mAll;28A-7A-1AA-mAll;32A-7AA-1A-mAll;32A-7A-1AA-mAll;7AA-7A-1A-mAll;7A-7A-1AA-mAll;8AA-7A-1A-mAll;8A-7AA-1A-mAll;8A-7A-1AA-mAll;7CA-1A-mAll;7C-1AA-mAll;38AA-8A-1A-mAll;38A-8AA-1A-mAll;38A-8A-1AA-mAll;3AA-1A-mAll;3A-1CA-mAll;32A-20AA-3A-mAll;32A-20A-3AA-mAll;42AA-20A-3A-mAll;42A-20AA-3A-mAll;42A-20A-3AA-mAll;40AA-28A-3A-mAll;40A-28AA-3A-mAll;40A-28A-3AA-mAll;20AA-3A-3A-mAll;20A-3AA-3A-mAll;7AA-3A-3A-mAll;7A-3AA-3A-mAll;8AA-3A-3A-mAll;8A-3AA-3A-mAll;28AA-3A-3A-mAll;28A-3AA-3A-mAll;40CA-3A-mAll;40C-3AA-mAll;42CA-3A-mAll;42C-3AA-mAll;46C-3AA-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;32A-7AA-3A-mAll;32A-7A-3AA-mAll;38AA-7A-3A-mAll;38A-7AA-3A-mAll;38A-7A-3AA-mAll;46A-7AA-3A-mAll;46A-7A-3AA-mAll;7AA-7A-3A-mAll;7A-7A-3AA-mAll;8AA-7A-3A-mAll;8A-7AA-3A-mAll;8A-7A-3AA-mAll;7CA-3A-mAll;7C-3AA-mAll;32A-8AA-3A-mAll;32A-8A-3AA-mAll;38AA-8A-3A-mAll;38A-8AA-3A-mAll;38A-8A-3AA-mAll;20AA-3C-mAll;20A-3CA-mAll;28AA-3C-mAll;28A-3CA-mAll;32A-3CA-mAll;7AA-3C-mAll;7A-3CA-mAll;8AA-3C-mAll;8A-3CA-mAll;38AA-3C-mAll;38A-3CA-mAll;32A-20AA-7A-mAll;32A-20A-7AA-mAll;38AA-20A-7A-mAll;38A-20AA-7A-mAll;38A-20A-7AA-mAll;40CA-7A-mAll;40C-7AA-mAll;46C-7AA-mAll;8AA-7A-7A-mAll;8A-7AA-7A-mAll;38AA-8A-7A-mAll;38A-8AA-7A-mAll;38A-8A-7AA-mAll;20AA-7C-mAll;20A-7CA-mAll;28AA-7C-mAll;28A-7CA-mAll;38CA-20A-mAll;38C-20AA-mAll;40CA-28A-mAll;40C-28AA-mAll;28AA-3A-1A-1A-mAll;28A-3AA-1A-1A-mAll;28A-3A-1AA-1A-mAll;7AA-3A-1A-1A-mAll;7A-3AA-1A-1A-mAll;7A-3A-1AA-1A-mAll;3CA-1A-1A-mAll;3C-1AA-1A-mAll;7AA-3A-3A-1A-mAll;7A-3AA-3A-1A-mAll;7A-3A-3A-1AA-mAll;8AA-3A-3A-1A-mAll;8A-3AA-3A-1A-mAll;8A-3A-3A-1AA-mAll;20AA-3A-3A-1A-mAll;20A-3AA-3A-1A-mAll;20A-3A-3A-1AA-mAll;40CA-3A-1A-mAll;40C-3AA-1A-mAll;40C-3A-1AA-mAll;42CA-3A-1A-mAll;42C-3AA-1A-mAll;42C-3A-1AA-mAll;7AA-7A-3A-1A-mAll;7A-7A-3AA-1A-mAll;7A-7A-3A-1AA-mAll;7CA-3A-1A-mAll;7C-3AA-1A-mAll;7C-3A-1AA-mAll;20AA-3C-1A-mAll;20A-3CA-1A-mAll;20A-3C-1AA-mAll;28AA-3C-1A-mAll;28A-3CA-1A-mAll;28A-3C-1AA-mAll;7AA-3C-1A-mAll;7A-3CA-1A-mAll;7A-3C-1AA-mAll;8AA-3C-1A-mAll;8A-3CA-1A-mAll;8A-3C-1AA-mAll;20AA-7C-1A-mAll;20A-7CA-1A-mAll;20A-7C-1AA-mAll;28AA-7C-1A-mAll;28A-7CA-1A-mAll;28A-7C-1AA-mAll;40CA-28A-3A-mAll;40C-28AA-3A-mAll;40C-28A-3AA-mAll;7AA-7A-3A-3A-mAll;7A-7A-3AA-3A-mAll;8AA-7A-3A-3A-mAll;8A-7AA-3A-3A-mAll;8A-7A-3AA-3A-mAll;46C-7AA-3A-mAll;46C-7A-3AA-mAll;8AA-7A-7A-3A-mAll;8A-7AA-7A-3A-mAll;8A-7A-7A-3AA-mAll;20AA-7C-3A-mAll;20A-7CA-3A-mAll;20A-7C-3AA-mAll;28AA-7C-3A-mAll;28A-7CA-3A-mAll;28A-7C-3AA-mAll;20AA-7A-3C-mAll;20A-7AA-3C-mAll;20A-7A-3CA-mAll;28AA-7A-3C-mAll;28A-7AA-3C-mAll;28A-7A-3CA-mAll;32A-7AA-3C-mAll;32A-7A-3CA-mAll;38AA-7A-3C-mAll;38A-7AA-3C-mAll;38A-7A-3CA-mAll;8AA-7A-3C-mAll;8A-7AA-3C-mAll;8A-7A-3CA-mAll;7CA-3C-mAll;7C-3CA-mAll;38AA-8A-3C-mAll;38A-8AA-3C-mAll;38A-8A-3CA-mAll;40DA-7A-mAll;40D-7AA-mAll;"/>
+        <stop/>
+      </actions>
+    </case>
+
+    <case>
       <location_mcc_in list="EU_MCCs"/>
       <actions>
-        <ca_band_combos string="1AA-1A-mAll;20AA-1A-mAll;20A-1AA-mAll;28AA-1A-mAll;28A-1AA-mAll;32A-1AA-mAll;38AA-1A-mAll;38A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;40AA-1A-mAll;40A-1AA-mAll;41AA-1A-mAll;41A-1AA-mAll;42AA-1A-mAll;42A-1AA-mAll;5AA-1A-mAll;5A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;8AA-1A-mAll;8A-1AA-mAll;1CA-mAll;20AA-3A-mAll;20A-3AA-mAll;27AA-3A-mAll;27A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;32A-3AA-mAll;38AA-3A-mAll;38A-3AA-mAll;3AA-3A-mAll;40AA-3A-mAll;40A-3AA-mAll;41AA-3A-mAll;41A-3AA-mAll;42AA-3A-mAll;42A-3AA-mAll;5AA-3A-mAll;5A-3AA-mAll;7AA-3A-mAll;7A-3AA-mAll;8AA-3A-mAll;8A-3AA-mAll;3CA-mAll;5AA-5A-mAll;38AA-5A-mAll;38A-5AA-mAll;40AA-5A-mAll;40A-5AA-mAll;41AA-5A-mAll;41A-5AA-mAll;7AA-5A-mAll;7A-5AA-mAll;5BA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;32A-7AA-mAll;40AA-7A-mAll;40A-7AA-mAll;42AA-7A-mAll;42A-7AA-mAll;7AA-7A-mAll;8AA-7A-mAll;8A-7AA-mAll;7BA-mAll;7CA-mAll;32A-8AA-mAll;38AA-8A-mAll;38A-8AA-mAll;40AA-8A-mAll;40A-8AA-mAll;41AA-8A-mAll;41A-8AA-mAll;42AA-8A-mAll;42A-8AA-mAll;8BA-mAll;38AA-28A-mAll;38A-28AA-mAll;40AA-28A-mAll;40A-28AA-mAll;41AA-28A-mAll;41A-28AA-mAll;42AA-28A-mAll;42A-28AA-mAll;40AA-38A-mAll;40A-38AA-mAll;38CA-mAll;40AA-40A-mAll;41AA-40A-mAll;41A-40AA-mAll;42AA-40A-mAll;42A-40AA-mAll;40CA-mAll;41AA-41A-mAll;42AA-41A-mAll;42A-41AA-mAll;41CA-mAll;42AA-42A-mAll;42CA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;28AA-3A-1A-mAll;28A-3AA-1A-mAll;28A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;28AA-7A-1A-mAll;28A-7AA-1A-mAll;28A-7A-1AA-mAll;20AA-3A-3A-mAll;20A-3AA-3A-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;7CA-3A-mAll;7C-3AA-mAll;20AA-3C-mAll;20A-3CA-mAll;7AA-3C-mAll;7A-3CA-mAll;32A-3AA-1A-mAll;32A-3A-1AA-mAll;7CA-1A-mAll;7C-1AA-mAll;20AA-7A-1A-mAll;20A-7AA-1A-mAll;20A-7A-1AA-mAll;32A-7AA-1A-mAll;32A-7A-1AA-mAll;32A-7AA-3A-mAll;32A-7A-3AA-mAll;32A-20AA-3A-mAll;32A-20A-3AA-mAll;32A-20AA-7A-mAll;32A-20A-7AA-mAll;32A-20AA-mAll;"/>
+        <ca_band_combos string="20AA-1A-mAll;20A-1AA-mAll;28AA-1A-mAll;28A-1AA-mAll;3AA-1A-mAll;3A-1AA-mAll;7AA-1A-mAll;7A-1AA-mAll;20AA-3A-mAll;20A-3AA-mAll;28AA-3A-mAll;28A-3AA-mAll;3AA-3A-mAll;7AA-3A-mAll;7A-3AA-mAll;3CA-mAll;20AA-7A-mAll;20A-7AA-mAll;28AA-7A-mAll;28A-7AA-mAll;7CA-mAll;20AA-3A-1A-mAll;20A-3AA-1A-mAll;20A-3A-1AA-mAll;28AA-3A-1A-mAll;28A-3AA-1A-mAll;28A-3A-1AA-mAll;7AA-3A-1A-mAll;7A-3AA-1A-mAll;7A-3A-1AA-mAll;28AA-7A-1A-mAll;28A-7AA-1A-mAll;28A-7A-1AA-mAll;20AA-3A-3A-mAll;20A-3AA-3A-mAll;20AA-7A-3A-mAll;20A-7AA-3A-mAll;20A-7A-3AA-mAll;28AA-7A-3A-mAll;28A-7AA-3A-mAll;28A-7A-3AA-mAll;7CA-3A-mAll;7C-3AA-mAll;20AA-3C-mAll;20A-3CA-mAll;7AA-3C-mAll;7A-3CA-mAll;"/>
         <stop/>
       </actions>
     </case>
