@@ -15,7 +15,7 @@
       <plmn_list name="plmn_firstnet">312-670 313-100 313-110 313-120 313-130 313-140</plmn_list>
       <plmn_list name="plmn_lla">313-790</plmn_list>
       <plmn_list name="plmn_tmo">310-160 310-200 310-210 310-220 310-230 310-240 310-250 310-260 310-270 310-310 310-490 310-660 310-800</plmn_list>
-      <plmn_list name="plmn_usc">310-730 311-220 311-580</plmn_list>
+      <plmn_list name="plmn_usc">310-730 311-220 311-580 311-220 311-221 311-222 311-223 311-224 311-225 311-226 311-227 311-228 311-229 311-581 311-582 311-583 311-584 311-585 311-586 311-587 311-588 311-589</plmn_list>
       <plmn_list name="plmn_sprint">310-120 311-490 311-870 312-250 312-530 316-010</plmn_list>
       <plmn_list name="plmn_cbrs">312-580 310-014 311-400 314-020</plmn_list>
       <plmn_list name="plmn_rogers">302-37 302-72 302-370 302-660 302-720</plmn_list>
