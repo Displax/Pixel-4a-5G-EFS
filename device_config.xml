@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Device configuration file for single sim CHGWLT config 
-$Header: //commercial/MPSS.HI.2.0.c8/Main/modem_proc/mmcp/policyman/configurations/DevConfig/SS/device_config.xml#1 $
+$Header: //service/MPSS/MPSS.HI.2.0.c8-00220-SAIPAN_GEN_PACK-1.13403.4.15091/modem_proc/mmcp/policyman/configurations/DevConfig/SS/device_config.xml#1 $
 -->
 <policy name        = "Single SIM Device Config"
-        changelist  = "$Change: 26214001 $"
+        changelist  = "$Change: 39866276 $"
         policy_ver  = "2025.1.5"
 >
 
